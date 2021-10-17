@@ -4,8 +4,8 @@ Simple WhatsApp Bot
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ZulGanzy/zul-bot)
 ## LAIN-LAIN
-[`SC ORI`](https://github.com/Nurutomo/wabot-aq)
 
+[`SC ORI`](https://github.com/Nurutomo/wabot-aq)
 [`YANG NGODE ULANG`](https://github.com/andyjavadams/botwa)
 ## FOR TERMUX/UBUNTU/SSH USER
 

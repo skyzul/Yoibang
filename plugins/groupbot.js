@@ -1,10 +1,6 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `
-https://chat.whatsapp.com/INxbycxSIoKJ3TfEcWWnZR
-https://chat.whatsapp.com/FVXHSkiiVamAPizBW1o6HO
-https://chat.whatsapp.com/EbBq9G2zSwcCEIOy0pPPoT
-https://chat.whatsapp.com/FM7SOVtUWq8CMXLf0uOAQJ
-https://chat.whatsapp.com/HHLI7vA2mdKCpZldjUAVxJ
+Gada bang
 `.trim()
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*apa itu?*', 'status@broadcast')

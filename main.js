@@ -122,10 +122,10 @@ global.reloadHandler = function () {
     conn.off('group-participants-update', conn.onParticipantsUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'Hai @user 👋 Selamat datang di grup @subject\n\n『𝐈𝐍𝐆𝐓𝐑𝐎 𝐃𝐔𝐌𝐋𝐔』\n╭─「𝙿𝚎𝚛𝚔𝚎𝚗𝚊𝚕𝚊𝚗」\n│ • 𝙽𝚊𝚖𝚊 𝚙𝚊𝚗𝚐𝚐𝚒𝚕𝚊𝚗 : \n│ • 𝙽𝚊𝚖𝚊 𝚙𝚊𝚗𝚓𝚊𝚗𝚐 : \n│ • 𝚄𝚖𝚞𝚛 :\n│ • 𝙺𝚎𝚕𝚊𝚖𝚒𝚗 : \n╰─────────────────\n*JAMGAN LUPA BACA DEKS*\n\n@desc\n\n© ZUL × BOT'
-  conn.bye = '*Yah si @user keluar, okelah gpp*'
-  conn.spromote = '『𝐖𝐀𝐇 𝐀𝐃𝐀 𝐀𝐃𝐌𝐈𝐍 𝐁𝐀𝐑𝐔』\n╭─❒\n│ *Wah @user😈*\n│ *Selamat amda menjadi admin*\n╰──────────────❒'
-  conn.sdemote = '『𝐖𝐀𝐇 𝐀𝐃𝐀 𝐘𝐀𝐍𝐆 𝐓𝐔𝐑𝐔𝐍 𝐏𝐀𝐍𝐆𝐊𝐀𝐓』\n╭─❒\n│ *Wah @user👿*\n│ *Yahaha amda menjadi member*\n╰──────────────❒'
+  conn.welcome = 'Hai @user 👋 Selamat datang di grup @subject\n\n*『SALAM KENAL』*\n\n*DESKRIPSI GROUP*\n\n@desc\n\n© ZUL × BOT'
+  conn.bye = '*Byee @user awikwok*'
+  conn.spromote = '*『PROMOTE』* \n╭─❒\n│ *Wah @use*\n│ *Selamat amda menjadi admin*\n╰──────────────❒'
+  conn.sdemote = '*『DEMOTE』* \n╭─❒\n│ *Wah @use*\n│ *Yahaha amda menjadi member*\n╰──────────────❒'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
   conn.onParticipantsUpdate = handler.participantsUpdate

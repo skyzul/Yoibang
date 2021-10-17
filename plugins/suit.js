@@ -13,27 +13,27 @@ let handler = async (m, { text, usedPrefix }) => {
 
     //menentukan rules
     if (text == astro) {
-        m.reply(`Seri!\nkamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+        m.reply(`Seri!\nkamu: ${text}\nZ U L - B O T Z: ${astro}`)
     } else if (text == 'batu') {
         if (astro == 'gunting') {
             global.DATABASE._data.users[m.sender].money += 5000
-            m.reply(`Kamu menang! +5000 Money\nKamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+            m.reply(`Kamu menang! +5000 Money\nKamu: ${text}\nZ U L - B O T Z: ${astro}`)
         } else {
-            m.reply(`Kamu kalah!\nkamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+            m.reply(`Kamu kalah!\nkamu: ${text}\nZ U L - B O T Z: ${astro}`)
         }
     } else if (text == 'gunting') {
         if (astro == 'kertas') {
             global.DATABASE._data.users[m.sender].money += 5000
-            m.reply(`Kamu menang! +5000 Money\nKamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+            m.reply(`Kamu menang! +5000 Money\nKamu: ${text}\nZ U L - B O T Z: ${astro}`)
         } else {
-            m.reply(`Kamu kalah!\nkamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+            m.reply(`Kamu kalah!\nkamu: ${text}\nZ U L - B O T Z: ${astro}`)
         }
     } else if (text == 'kertas') {
         if (astro == 'batu') {
             global.DATABASE._data.users[m.sender].money += 5000
-            m.reply(`Kamu menang! +5000 Money\nKamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+            m.reply(`Kamu menang! +5000 Money\nKamu: ${text}\nZUL - B O T Z: ${astro}`)
         } else {
-            m.reply(`Kamu kalah!\nkamu: ${text}\nA N D Y - B O T Z: ${astro}`)
+            m.reply(`Kamu kalah!\nkamu: ${text}\nZUL - B O T Z: ${astro}`)
         }
     } else {
         throw salah

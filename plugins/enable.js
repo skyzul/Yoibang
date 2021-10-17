@@ -36,8 +36,8 @@ handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
 
-handler.admin = false
+handler.admin = true
 handler.botAdmin = true
-handler.owner = true
+handler.owner = false
 
 module.exports = handler

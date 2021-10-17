@@ -42,12 +42,9 @@ let text = `
 
 *╭─❒* *INFO AMDA*
 *│* *NAMA:* \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
-*│* *UANG:*
-*│* \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│* *LIMIT:*
-*│* \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│* *EXP:*
-*│* \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* *UANG:* \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* *LIMIT:* \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* *EXP:* \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
 *╰──────────────────❒*
 
 `.trim()

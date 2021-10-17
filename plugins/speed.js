@@ -51,8 +51,6 @@ Merespon dalam ${speed} millidetik
 - *${chats.length - groups.length}* Personal Chats
 - *${chats.length}* Total Chats
 
-📱 *Phone Info* :
-${'```' + `
 🔋 Battery : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charging...' : '⚡ Discharging'}` : 'Unknown'}
 ${util.format(conn.user.phone)}
 `.trim() + '```'}
@@ -73,5 +71,5 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
 
-handler.command = /^(in)$/i
+handler.command = /^(speed)$/i
 module.exports = handler

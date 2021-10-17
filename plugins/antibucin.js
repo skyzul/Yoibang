@@ -2,7 +2,7 @@ let { Presence } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 	if(!args || !args[0]) {
 		await conn.updatePresence(m.chat, Presence.composing) 
-     conn.send2Button(m.chat, 'Hayoloh', '© A N D Y - B O T Z', 'on', '.antibucin nobucinbang', 'off', '.antibucin bucinbang',m)
+     conn.send2Button(m.chat, 'Hayoloh', '© Z U L - B O T Z', 'on', '.antibucin nobucinbang', 'off', '.antibucin bucinbang',m)
 	} else if(args[0] == 'nobucinbang') {
 		let cek = global.DATABASE._data.chats[m.chat].nobucin
 	if(cek) return conn.reply(m.chat, `*Anti-Bucin telah aktif pada grup ini.*`, m)
@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 		conn.reply(m.chat, `*Anti-Bucin Batu berhasil di nonaktifkan.*`, m)
 	} else {
 		await conn.updatePresence(m.chat, Presence.composing) 
-		conn.send2Button(m.chat, 'Hayoloh', '© A N D Y - B O T Z', 'on', '.antibucin nobucinbang', 'off', '.antibucin bucinbang',m)
+		conn.send2Button(m.chat, 'Hayoloh', '© Z U L - B O T Z', 'on', '.antibucin nobucinbang', 'off', '.antibucin bucinbang',m)
 	} 
 }
 handler.help = ['antibucin']

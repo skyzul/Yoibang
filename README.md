@@ -7,6 +7,7 @@ Simple WhatsApp Bot
 
 * [`SC ORI`](https://github.com/Nurutomo/wabot-aq)
 * [`YANG NGODE ULANG`](https://github.com/andyjavadams/botwa)
+* [`WHATSAPP SAYA`](wa.me/6289528232401?text=Assalamualaikum+bang) Kalau ada yang mau ditanyakan bisa chat saya
 ## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash

@@ -231,7 +231,7 @@ module.exports = {
         if (typeof chat !== 'object') global.DATABASE._data.chats[m.chat] = {}
         if (chat) {
           if (!('isBanned' in chat)) chat.isBanned = false
-          if (!('welcome' in chat)) chat.welcome = true
+          if (!('welcome' in chat)) chat.welcome = false
           if (!('detect' in chat)) chat.detect = true
           if (!('sWelcome' in chat)) chat.sWelcome = ''
           if (!('sBye' in chat)) chat.sBye = ''
@@ -251,13 +251,13 @@ module.exports = {
         if (!('noemotebatu' in chat)) chat.noemotebatu = false
         } else global.DATABASE._data.chats[m.chat] = {
           isBanned: false,
-          welcome: true,
+          welcome: false,
           detect: true,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
-          delete: false,
+          delete: true,
           nobadword: false,
         nolink: false,
         novirtex: false,
@@ -798,8 +798,8 @@ Untuk mematikan fitur ini, ketik
 global.dfail = (type, m, conn) => {
   let msg = {
     rowner: 'Nanti aja bang...',
-    owner: '𝙷𝙰𝚈𝙾 𝙼𝙰𝚄 𝙽𝙶𝙰𝙿𝙰𝙸𝙽? 𝙶𝙸𝚃𝚄 𝙻𝙰𝙶𝙸, 𝚃𝙰𝙺 𝙱𝙴𝙽𝙶𝙽𝙴𝚃 𝙿𝙴𝚁𝙼𝙰𝙽𝙴𝙽 !!!',
-    mods: '𝙷𝙰𝚈𝙾 𝙼𝙰𝚄 𝙽𝙶𝙰𝙿𝙰𝙸𝙽? 𝙶𝙸𝚃𝚄 𝙻𝙰𝙶𝙸, 𝚃𝙰𝙺 𝙱𝙴𝙽𝙶𝙽𝙴𝚃 𝙿𝙴𝚁𝙼𝙰𝙽𝙴𝙽 !!!',
+    owner: 'Fitur khusus owner...',
+    mods: 'Fitur hanya untuk moderator/owner...',
     premium: 'Hanya user *premium* yang bisa menggunakan fitur ini\nMau daftar premium? ketik *.goprem*',
     group: 'Harus didalam grup sayang',
     private: 'Chat pribadi aja sayang',

@@ -5,9 +5,9 @@ Simple WhatsApp Bot
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ZulGanzy/zul-bot)
 ## LAIN-LAIN
 
-* [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/Nurutomo/wabot-aq) Sc ori
-* [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/andyjavadams/botwa) Yang ngode ulang
-* [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](wa.me/6289528232401?text=Assalamualaikum+bang) Kalau ada yang mau ditanyakan bisa chat saya
+* [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/Nurutomo/wabot-aq) (**Sc ori**)
+* [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/andyjavadams/botwa) (**Yang ngode ulang**)
+* [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](wa.me/6289528232401?text=Assalamualaikum+bang) (**Kalau ada yang mau ditanyakan bisa chat saya**)
 ## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash

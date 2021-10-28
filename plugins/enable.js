@@ -37,7 +37,7 @@ handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
 
 handler.admin = true
-handler.botAdmin = true
-handler.owner = false
+handler.botAdmin = false
+handler.owner = true
 
 module.exports = handler

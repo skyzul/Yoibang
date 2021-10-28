@@ -124,22 +124,21 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 *│* ➤𝐉𝐀𝐌 : \`\`\`%time\`\`\`
 *│* ➤𝐇𝐀𝐑𝐈 : \`\`\`%week %weton\`\`\`
 *│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : \`\`\`%date\`\`\`
-*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 𝐈𝐒𝐋𝐀𝐌 : \`\`\`%dateIslamic\`\`\`
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙁𝙊 𝘽𝙊𝙏*
-*│* ➤ *Nama : Zul BOT*
-*│* ➤ *Owner : Zul*
-*│* ➤ *Recode : Andy*
-*│* ➤ *Total user :* \`\`\`%totalreg\`\`\`
-*│* ➤ *Run Time :* \`\`\`%uptime\`\`\`
-*│* ➤ *Grup wa:*
-*│* ➤ *https://bit.ly/3BULfVM* 
+*│* ➤ \`\`\`Nama : Zul BOT\`\`\`
+*│* ➤ \`\`\`Owner : Zul\`\`\`
+*│* ➤ \`\`\`Recode : Andy\`\`\`
+*│* ➤ \`\`\`Total user :\`\`\` \`\`\`%totalreg\`\`\`
+*│* ➤ \`\`\`Run Time :\`\`\` \`\`\`%uptime\`\`\`
+*│* ➤ \`\`\`Grup wa:\`\`\`
+*│* ➤ \`\`\`https://bit.ly/3BULfVM\`\`\` 
 *╰──────────────────❒*
 
 
 %readmore`
     let header = conn.menu.header || '╭─❒ ```%category```'
-    let body   = conn.menu.body   || '*│➣* *%cmd%islimit*'
+    let body   = conn.menu.body   || '│➣ ```%cmd%islimit```'
     let footer = conn.menu.footer || '*╰────────────────❒*\n'
     let after  = conn.menu.after  || '➣ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n*A R I F F B*\n*R I F A I*\n*B A N G - A N D Y*\n*S A Y A (ZUL)*\n\n%readmore\n*INI ZUL:v*\n*DONASI LAH BANG*'
     let _text  = before + '\n'

@@ -179,7 +179,9 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => ''+replace[name])
         
   
-conn.fakeReply(m.chat, `Ndak tau bang…`, '0@s.whatsapp.net','*INGATLAH KAWAN, YANG HADIR, BELUM TENTU MENJADI TAKDIR.*')
+conn.fakeReply(m.chat, `Owner saya conn.reply(m.chat, `@${global.owner[0]}
+
+`.trim(), m, { contextIfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })`, '0@s.whatsapp.net','*BENTAR BANG…*')
 conn.reply(m.chat, text.trim(),  {
  key: {
   participant: '0@s.whatsapp.net',

@@ -103,11 +103,11 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 *╭─❒ 𝙄𝙏𝙎 𝙈𝙀 𝙕𝙐𝙇 𝘽𝙊𝙏*
 *╰──────────────❒*
 ──❒ *INFO* ❒──
-Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*
+*Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*
 ❒ *SEKIAN TERIMAKASIH* ❒
 
 *╭─❒ Jadwal*
-*╰────❒ $jadwal*
+*╰────❒ ${jadwal()}*
 *╭─❒𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍*
 *│* ➤𝐍𝐀𝐌𝐀 : \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
 *│* ➤𝐗𝐏 : \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
@@ -115,24 +115,16 @@ Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*
 *│* ➤𝐋𝐈𝐌𝐈𝐓 : \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈*
-*│* ➤𝐀𝐍𝐃𝐘 : 
-*│* bit.ly/3hgyfBK
-*│* ➤𝐙𝐔𝐋 : 
-*│* bit.ly/3C0NbMa
-*│* ➤𝐀𝐍𝐃𝐘 𝐁𝐎𝐓 : 
-*│* bit.ly/3nsogNs
-*│* ➤𝐙𝐔𝐋 𝐁𝐎𝐓 : 
-*│* bit.ly/3A3CfwN
+*│* ➤𝐀𝐍𝐃𝐘 : bit.ly/3hgyfBK
+*│* ➤𝐙𝐔𝐋 : bit.ly/3C0NbMa
+*│* ➤𝐀𝐍𝐃𝐘 𝐁𝐎𝐓 : bit.ly/3nsogNs
+*│* ➤𝐙𝐔𝐋 𝐁𝐎𝐓 : bit.ly/3A3CfwN
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙂𝙁𝙊*
-*│* ➤𝐉𝐀𝐌 : 
-*│* \`\`\`%time\`\`\`
-*│* ➤𝐇𝐀𝐑𝐈 : 
-*│* \`\`\`%week %weton\`\`\`
-*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : 
-*│* \`\`\`%date\`\`\`
-*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 𝐈𝐒𝐋𝐀𝐌 : 
-*│* \`\`\`%dateIslamic\`\`\`
+*│* ➤𝐉𝐀𝐌 : \`\`\`%time\`\`\`
+*│* ➤𝐇𝐀𝐑𝐈 : \`\`\`%week %weton\`\`\`
+*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : \`\`\`%date\`\`\`
+*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 𝐈𝐒𝐋𝐀𝐌 : \`\`\`%dateIslamic\`\`\`
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙁𝙊 𝘽𝙊𝙏*
 *│* ➤ *Nama : Zul BOT*
@@ -146,7 +138,7 @@ Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*
 
 
 %readmore`
-    let header = conn.menu.header || '╭─❒ ```%category```❒'
+    let header = conn.menu.header || '╭─❒ ```%category```'
     let body   = conn.menu.body   || '*│➣* *%cmd%islimit*'
     let footer = conn.menu.footer || '*╰────────────────❒*\n'
     let after  = conn.menu.after  || '➣ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n*A R I F F B*\n*R I F A I*\n*B A N G - A N D Y*\n*S A Y A (ZUL)*\n\n%readmore\n*INI ZUL:v*\n*DONASI LAH BANG*'
@@ -179,7 +171,7 @@ Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => ''+replace[name])
         
   
-conn.fakeReply(m.chat, `Ndak tau bang…`, '0@s.whatsapp.net','*INGATLAH KAWAN, YANG HADIR, BELUM TENTU MENJADI TAKDIR.*')
+conn.fakeReply(m.chat, `Loading...`, '0@s.whatsapp.net','*BENTAR BANG*')
 conn.reply(m.chat, text.trim(),  {
  key: {
   participant: '0@s.whatsapp.net',

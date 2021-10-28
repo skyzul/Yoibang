@@ -102,56 +102,54 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
     let before = conn.menu.before || `
 *╭─❒ 𝙄𝙏𝙎 𝙈𝙀 𝙕𝙐𝙇 𝘽𝙊𝙏*
 *╰──────────────❒*
-──❒ *YA GITU* ❒──
-${pickRandom(['*❕ PENTING  : Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*', '*Awas lu spam, gw tandain nomor lu anjg*', '*Open sewa bot*'])}
+──❒ *INFO* ❒──
+Bang Andy menjual nomor OTP canada, ketik .toko untuk melihat produk lainnya.*
 ❒ *SEKIAN TERIMAKASIH* ❒
 
-*╭─❒❗𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍*
-*│*➤𝐍𝐀𝐌𝐀 : \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
-*│*➤𝐗𝐏 : \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│*➤𝐌𝐎𝐍𝐄𝐘 : \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│*➤𝐋𝐈𝐌𝐈𝐓 : \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
+*╭─❒ Jadwal*
+*╰────❒ $jadwal*
+*╭─❒𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍*
+*│* ➤𝐍𝐀𝐌𝐀 : \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
+*│* ➤𝐗𝐏 : \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* ➤𝐌𝐎𝐍𝐄𝐘 : \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* ➤𝐋𝐈𝐌𝐈𝐓 : \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
 *╰──────────────────❒*
-*╭─❒❗𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈*
-*│*➤𝐀𝐍𝐃𝐘 : 
+*╭─❒𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈*
+*│* ➤𝐀𝐍𝐃𝐘 : 
 *│* bit.ly/3hgyfBK
-*│*➤𝐙𝐔𝐋 : 
+*│* ➤𝐙𝐔𝐋 : 
 *│* bit.ly/3C0NbMa
-*│*➤𝐀𝐍𝐃𝐘 𝐁𝐎𝐓 : 
+*│* ➤𝐀𝐍𝐃𝐘 𝐁𝐎𝐓 : 
 *│* bit.ly/3nsogNs
-*│*➤𝐙𝐔𝐋 𝐁𝐎𝐓 : 
+*│* ➤𝐙𝐔𝐋 𝐁𝐎𝐓 : 
 *│* bit.ly/3A3CfwN
 *╰──────────────────❒*
-*╭─❒❗𝙄𝙉𝙂𝙁𝙊*
-*│*➤𝐉𝐀𝐌 : 
+*╭─❒𝙄𝙉𝙂𝙁𝙊*
+*│* ➤𝐉𝐀𝐌 : 
 *│* \`\`\`%time\`\`\`
-*│*➤𝐇𝐀𝐑𝐈 : 
+*│* ➤𝐇𝐀𝐑𝐈 : 
 *│* \`\`\`%week %weton\`\`\`
-*│*➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : 
+*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : 
 *│* \`\`\`%date\`\`\`
-*│*➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 𝐈𝐒𝐋𝐀𝐌 : 
+*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 𝐈𝐒𝐋𝐀𝐌 : 
 *│* \`\`\`%dateIslamic\`\`\`
 *╰──────────────────❒*
-*╭─❒❗𝙄𝙉𝙁𝙊 𝘽𝙊𝙏*
-*│*➤𝐍𝐀𝐌𝐀 𝐎𝐖𝐍𝐄𝐑 :
-*│* 𝙕𝙐𝙇
-*│*➤𝐍𝐎𝐌𝐎𝐑 𝐎𝐖𝐍𝐄𝐑 :
-*│* wa.me/6289528232401
-*│*➤𝐓𝐎𝐓𝐀𝐋 𝐔𝐒𝐄𝐑 :
-*│* \`\`\`%totalreg\`\`\`
-*│*➤𝐔𝐏 𝐓𝐈𝐌𝐄 :
-*│* \`\`\`%uptime\`\`\`
-*│*➤𝐆𝐑𝐔𝐏 𝐁𝐎𝐓 :
-*│* https://bit.ly/3BULfVM 
-*│* *Grup new, yang lama ilang*
+*╭─❒𝙄𝙉𝙁𝙊 𝘽𝙊𝙏*
+*│* ➤ *Nama : Zul BOT*
+*│* ➤ *Owner : Zul*
+*│* ➤ *Recode : Andy*
+*│* ➤ *Total user :* \`\`\`%totalreg\`\`\`
+*│* ➤ *Run Time :* \`\`\`%uptime\`\`\`
+*│* ➤ *Grup wa:*
+*│* ➤ *https://bit.ly/3BULfVM* 
 *╰──────────────────❒*
 
 
 %readmore`
-    let header = conn.menu.header || '*╭─❒* ```%category``` ❒'
+    let header = conn.menu.header || '╭─❒ ```%category```❒'
     let body   = conn.menu.body   || '*│➣* *%cmd%islimit*'
     let footer = conn.menu.footer || '*╰────────────────❒*\n'
-    let after  = conn.menu.after  || '➣ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n*A R I F F B*\n*R I F A I*\n*B A N G - A N D Y*\n*S A Y A (ZUL)*\n%readmore\n*INI ZUL:v*\n*DONASI LAH BANG*'
+    let after  = conn.menu.after  || '➣ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n*A R I F F B*\n*R I F A I*\n*B A N G - A N D Y*\n*S A Y A (ZUL)*\n\n%readmore\n*INI ZUL:v*\n*DONASI LAH BANG*'
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
@@ -189,8 +187,8 @@ conn.reply(m.chat, text.trim(),  {
  },
  message: {
   imageMessage: {
-   caption: `*Hi, ${ucapan()} ${ucapin()} ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} ✨ ${jadwal()}*`,
-   jpegThumbnail: fs.readFileSync(`${pickRandom(['./src/logo.jpg', './src/xixi.jpg', './src/okok.jpg'])}`)
+   caption: `*Hi, ${ucapan()} ${ucapin()} ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} ✨ ${kerjaan()}*`,
+   jpegThumbnail: fs.readFileSync(`${pickRandom(['./src/logo.jpg', './src/xixi.jpg'])}`)
   }
  }
 }) 
@@ -258,7 +256,7 @@ function ucapin() {
     }
     return res
 }
-function jadwal() {
+function kerjaan() {
     const time = moment.tz('Asia/Jakarta').format('HH')
     res = "Jam segini udah main hp"
     if (time >= 4) {
@@ -272,6 +270,23 @@ function jadwal() {
     }
     if (time >= 18) {
         res = "Tidur bang"
+    }
+    return res
+}
+function jadwal() {
+    const time = moment.tz('Asia/Jakarta').format('HH')
+    res = "Turu"
+    if (time >= 4) {
+        res = "Sekumlah"
+    }
+    if (time > 10) {
+        res = "Pulang sekumlah"
+    }
+    if (time >= 15) {
+        res = "Main gem"
+    }
+    if (time >= 18) {
+        res = "Turu"
     }
     return res
 }

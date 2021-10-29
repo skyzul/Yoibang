@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
   {buttonId: '.owner', buttonText: {displayText: 'Mana owner nya'}, type: 1}
 ]
 const buttonMessage = {
-    contentText: "Done\nfolou ig saya sama bang Amdy\nhttps://instagram.com/_andy.offc\nhttps://instagram.com/zullsaha)",
+    contentText: "Done\nfolou ig saya sama bang Amdy\nhttps://instagram.com/_andy.offc\nhttps://instagram.com/zullsaha",
     footerText: 'wm Zul',
     buttons: buttons,
     headerType: 4, // change for file type

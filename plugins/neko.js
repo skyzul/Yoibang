@@ -8,11 +8,11 @@ let handler = async (m, { conn }) => {
    const media = await conn.prepareMessage(m.chat, {url:`${url}`}, MessageType.image, { thumbnail: Buffer.alloc(0) })// change for file type
    const buttons = [
   {buttonId: '/neko', buttonText: {displayText: 'Saya pengen lagi🗿'}, type: 1},
-  {buttonId: '.owner', buttonText: {displayText: 'Mana owner nya'}, type: 1}
+  {buttonId: '/hapus', buttonText: {displayText: 'Udah bang'}, type: 1}
 ]
 const buttonMessage = {
     contentText: "Done\nfolou ig saya sama bang Amdy\nhttps://instagram.com/_andy.offc\nhttps://instagram.com/zullsaha",
-    footerText: 'wm Zul',
+    footerText: 'weem Zul',
     buttons: buttons,
     headerType: 4, // change for file type
     imageMessage: media.message.imageMessage // change for file type

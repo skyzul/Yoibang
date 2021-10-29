@@ -8,15 +8,6 @@ let format = sizeFormatter({
   keepTrailingZeroes: false,
   render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-let handler = async (m, { conn }) => {
-  const chats = conn.chats.all()
-  const groups = chats.filter(v => v.jid.endsWith('g.us'))
-  const groupsIn = groups.filter(v => !v.read_only)
-  const used = process.memoryUsage()
-  const cpus = os.cpus().map(cpu => {
-    cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
-    return cpu
-  })
   const cpu = cpus.reduce((last, cpu, _, { length }) => {
     last.total += cpu.total
     last.speed += cpu.speed / length

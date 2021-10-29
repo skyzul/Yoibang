@@ -1,13 +1,25 @@
-let fetch = require('node-fetch')
-
-let handler = async (m, { conn, text }) => {
-let res = await fetch('https://raw.githubusercontent.com/Xmell91/loli/master/loli.json')
-if (!res.ok) throw await `${res.status} ${res.statusText}`;
-let json = await res.json();
-let url = json[Math.floor(Math.random() * json.length)]
-await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), 'Random Loli', 'Weem Zul', 'Saya pengen loli lagi🗿', '/loli', m)
+const fetch = require('node-fetch')
+let fs = require("fs")
+let { MessageType } =require("@adiwajshing/baileys")
+let handler = async (m, { conn }) => {
+    let res = await fetch('https://raw.githubusercontent.com/Xmell91/loli/master/loli.json')
+   let json = await res.json()
+   let { url } = json
+   const media = await conn.prepareMessage(m.chat, {url:`${url}`}, MessageType.image, { thumbnail: Buffer.alloc(0) })// change for file type
+   const buttons = [
+  {buttonId: '/loli', buttonText: {displayText: 'Saya pengen loli lebih banyak🗿'}, type: 1},
+  {buttonId: '/hapus', buttonText: {displayText: 'Udah'}, type: 1}
+]
+const buttonMessage = {
+    contentText: "Udah sih gitu aja",
+    footerText: 'Hamdeh\nWeem Zul
+    buttons: buttons,
+    headerType: 4, // change for file type
+    imageMessage: media.message.imageMessage // change for file type
 }
-handler.command = /^(loli)$/i
-handler.tags = ['fun']
+const sendMsg = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage, { quoted: m})
+}
 handler.help = ['loli']
+handler.tags = ['anime']
+handler.command = /^loli/i
 module.exports = handler

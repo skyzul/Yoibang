@@ -25,7 +25,7 @@ global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse()
 
 global.prefix = new RegExp('^[' + (opts['prefix'] || '‎AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890/i!#,$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
-global.DATABASE = new (require('./lib/database'))(`${opts.[0] ? opts.[0] + '_' : ''}database.json`, null, 2)
+global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
 if (!global.DATABASE.data.users) global.DATABASE.data = {
   users: {},
   chats: {},
@@ -122,10 +122,10 @@ global.reloadHandler = function () {
     conn.off('group-participants-update', conn.onParticipantsUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'Hai @user 👋 Selamat datang di grup @subject\n\n*『SALAM KENAL』*\n\n*DESKRIPSI GROUP*\n\n@desc\n\n© ZUL × BOT'
-  conn.bye = '*Byee @user awikwok*'
-  conn.spromote = '*『PROMOTE』* \n╭─❒\n│ *Wah @user*\n│ *Selamat amda menjadi admin*\n╰──────────────❒'
-  conn.sdemote = '*『DEMOTE』* \n╭─❒\n│ *Wah @user*\n│ *Yahaha amda menjadi member*\n╰──────────────❒'
+  conn.welcome = '*Hi, @user!*\n\n*Selamat datang di grup @subject, jangan lupa bahagia!*'
+  conn.bye = '*Yah si @user keluar, okelah gpp*'
+  conn.spromote = '@user sekarang Lo jadi admin!'
+  conn.sdemote = '@user sekarang bukan admin!'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
   conn.onParticipantsUpdate = handler.participantsUpdate

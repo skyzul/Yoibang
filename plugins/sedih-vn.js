@@ -1,5 +1,6 @@
 //tadinya iseng, eb malah work
 let fs = require("fs")
+let handler  = async (m, { conn, usedPrefix: _p }) => {
 const { MessageType,Presence } = require('@adiwajshing/baileys')
 const f = {
 	 key:

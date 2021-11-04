@@ -23,4 +23,4 @@ handler.tags = ['sticker']
 handler.command = /^colong$/i
 handler.owner = true
 
-module.exports = 
+module.exports = handler

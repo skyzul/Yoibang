@@ -419,6 +419,11 @@ stiker = await sticker(false, "https://telegra.ph/file/c9f9af78f667c3e5210ac.png
 	await conn.sendMessage(m.chat, stiker, MessageType.sticker, { sendEphemeral: true, quoted: m })
 	}
 	
+	if (!m.fromMe && m.text.match(/(sedih|sad|mengsedih|mengsad|semdih|😭|😢|😔|😓)/gi)) {
+stiker = await sticker(false, "https://telegra.ph/file/22b3b61b7bcfcb91bd062.png", "Gausah sedih", "Masih ada saia")
+        await conn.sendMessage(m.chat, stiker, MessageType.sticker, { sendEphemeral: true, quoted: m })
+	}
+	
 	if(enable.nojakarta && !m.fromMe && m.isGroup && !isAdmin && !isOwner && isBotAdmin) {
 	if (!m.fromMe && m.text.match(/(Lu|lu|gw|Gw|Gue|Gua|gue|gua)/gi)) {
 		conn.updatePresence(m.chat, Presence.composing) 

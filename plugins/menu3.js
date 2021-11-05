@@ -4,20 +4,7 @@ let moment = require ('moment-timezone')
 let handler = async (m, { conn, usedPrefix }) => {
 let name = m.fromMe ? conn.user : conn.contacts[m.sender]  
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-//let { nama } = global.DATABASE.data.users[who]
-//let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-//tonst freply = {
-  //key : {
-  //participant: '0@s.whatsapp.net',
-//  remoteJid: 'status@broadcast'
-// },
-// message: {
-  //imageMessage: {
-   //: `*Keren pamrah*`,
-   //jpegThumbnail: fs.readFileSync(`./src/alfita.jpg`)
-  //}
- //}
-//}
+const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
 const fgif = {
 	 key: { 
           fromMe: false,
@@ -30,8 +17,8 @@ const fgif = {
                  "h": `Hahaha`,
                  'seconds': '12345', 
                  'gifPlayback': 'true', 
-                 'caption': 'Ngeri Bang',
-                 'jpegThumbnail': fs.readFileSync('./src/logo.jpg')
+                 'caption': `${pickRandom(['Semdih','Hamdeh','Awikwok','Kemren bang','Wuis','Wamduh'])}`,,
+                 'jpegThumbnail': fs.readFileSync(`./cewe/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
                         }
                        }
 	                  } 
@@ -40,31 +27,11 @@ let text = `
 *❒* \`\`\`Hi, ${ucapan()} ${ucapin()}\`\`\`
 *❒* \`\`\`@${m.sender.replace(/@.+/, '')} ✨\`\`\`
 
-*╭─❒* *INFO AMDA*
-*│* *NAMA:* \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
-*│* *UANG:* \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│* *LIMIT:* \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│* *EXP:* \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
-*╰──────────────────❒*
-
+`/`/`/NB : Spam/Telpon : blok!!!`/`/`/
 `.trim()
 
- await conn.send2ButtonImg(m.chat, text.trim(), "./src/logo.jpg", "Jangan spam\nJika tidak ingin bot delay\n\n© ZUL × BOT", 'Menu', '.bwha', 'Saya mau liat list sewa bot', '.jsb', { quoted: fgif, sendEphemeral: true, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 135, isForwarded: true }})
- 
- 
-//await conn.send3Button(m.chat, text.trim(), '© ZUL BOT\nJANGAN SPAM ANJG', 'Menu', '.hah', 'Owner', '.owner', 'Donasi', '.donasi')
-//const buttons = [
- // {buttonId: '.hah', buttonText: {displayText: 'Menu'}, type: 1},
-//  {buttonId: '/donasi', buttonText: {displayText: 'Donasi'}, type: 1},
- // {buttonId: '/owner', buttonText: {displayText: 'Owner'}, type: 1}
-//]
-//const buttonMessage = {
-   // contentText: text.trim(),
-   // footerText: '© ZUL BOT',
-  //  buttons: buttons,
-   // headerType: 1 // change for file type // change for file type
-//}
-//const sendMsg = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage)
+ await conn.send2ButtonImg(m.chat, text.trim(), "./src/logo.jpg", "Jam : ${wib} WIB/n/n© zullsaha", 'Menu', '.bwha', 'Saya mau chat owner', '.owner', { quoted: fgif, sendEphemeral: true, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 135, isForwarded: true }})
+  
 }
 handler.command = /^(menu|help)$/i
 handler.owner = false

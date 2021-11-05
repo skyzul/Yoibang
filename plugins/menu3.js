@@ -17,7 +17,7 @@ const fgif = {
                  "h": `Hahaha`,
                  'seconds': '12345', 
                  'gifPlayback': 'true', 
-                 'caption': `${pickRandom(['Semdih','Hamdeh','Awikwok','Kemren bang','Wuis','Wamduh'])}`,,
+                 'caption': `${pickRandom(['Semdih','Hamdeh','Awikwok','Kemren bang','Wuis','Wamduh'])}`,
                  'jpegThumbnail': fs.readFileSync(`./cewe/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
                         }
                        }

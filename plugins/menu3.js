@@ -80,3 +80,6 @@ function ucapin() {
     }
     return res
 }
+function pickRandom(list) {
+    return list[Math.floor(Math.random() * list.length)]
+}

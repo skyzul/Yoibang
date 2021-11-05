@@ -41,7 +41,7 @@ const buttonMessage = {
     contentText: `\`\`\`Hamlo ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}, ${ucapan()} ${ucapin()}\`\`\`
 
 \`\`\`NB : Spam, Telpon : Blok!!!\`\`\``,
-    footerText: `Jam\n\n${wib} WIB\n\n© Zul Ganzy`,
+    footerText: `Jam ${wib} WIB\n\n© Zul Ganzy`,
     buttons: buttons,
     headerType: 4, // change for file type
     imageMessage: media.message.imageMessage // change for file type
@@ -59,7 +59,7 @@ const andy = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMe
            }}})
         setTimeout(() => {
         conn.deleteMessage(m.chat, andy.key)
-      }, 30000)
+      }, 70000)
 }
 handler.command = /^(menu|help)$/i
 handler.owner = false

@@ -6,6 +6,7 @@ let levelling = require('../lib/levelling')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let name = m.fromMe ? conn.user : conn.contacts[m.sender] 
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let { exp, limit, money, level } = global.DATABASE.data.users[m.sender]
@@ -121,7 +122,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 *│* ➤𝐙𝐔𝐋 𝐁𝐎𝐓 : bit.ly/3A3CfwN
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙂𝙁𝙊*
-*│* ➤𝐉𝐀𝐌 : \`\`\`%time\`\`\`
+*│* ➤𝐉𝐀𝐌 : \`\`\`${wib} WIB\`\`\`
 *│* ➤𝐇𝐀𝐑𝐈 : \`\`\`%week %weton\`\`\`
 *│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : \`\`\`%date\`\`\`
 *╰──────────────────❒*
@@ -178,8 +179,8 @@ conn.reply(m.chat, text.trim(),  {
  },
  message: {
   imageMessage: {
-   caption: `*Hi, ${ucapan()} ${ucapin()} ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} ✨ ${kerjaan()}*`,
-   jpegThumbnail: fs.readFileSync(`${pickRandom(['./src/logo.jpg', './src/xixi.jpg'])}`)
+   caption: `*Hamlo, ${ucapan()} ${ucapin()} ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} ${kerjaan()}*`,
+   jpegThumbnail: fs.readFileSync(`./Ceue/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
   }
  }
 }) 

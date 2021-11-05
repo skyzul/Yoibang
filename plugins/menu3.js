@@ -1,37 +1,65 @@
 let { MessageType, mentionedJid } = require('@adiwajshing/baileys')
+let fetch = require('node-fetch')
+let path = require('path')
 let fs = require ('fs')
 let moment = require ('moment-timezone')
 let handler = async (m, { conn, usedPrefix }) => {
-let name = m.fromMe ? conn.user : conn.contacts[m.sender]  
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
-const fgif = {
-	 key: { 
-          fromMe: false,
-	      participant: `0@s.whatsapp.net`, ...(m.chat ? 
-	 { remoteJid: "6285795431803-1625305606@g.us" } : {}) 
-                },
-	 message: { 
-                 "videoMessage": { 
-                 "title":"Anjay",
-                 "h": `Hahaha`,
-                 'seconds': '12345', 
-                 'gifPlayback': 'true', 
-                 'caption': `${pickRandom(['Semdih','Hamdeh','Awikwok','Kemren bang','Wuis','Wamduh'])}`,
-                 'jpegThumbnail': fs.readFileSync(`./cewe/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
-                        }
-                       }
-	                  } 
+let name = m.fromMe ? conn.user : conn.contacts[m.sender]
 let { limit, exp, money, lastclaim, registered, regTime, role, age, level } = global.DATABASE.data.users[m.sender]
-let text = `
-*❒* \`\`\`Hi, ${ucapan()} ${ucapin()}\`\`\`
-*❒* \`\`\`@${m.sender.replace(/@.+/, '')} ✨\`\`\`
+const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
+const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
+const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+//let oy = `@${tag.replace(/@.+/, '')}`
+//let own = `@${owner[0]}`
+const freply = {
+  key: {
+  participant: '0@s.whatsapp.net',
+  remoteJid: 'status@broadcast'
+ },
+ message: {
+  imageMessage: {
+   caption: `${pickRandom(['awikwok','kemren','wius','awikwok','wuis','hamdeh'])}`,
+      jpegThumbnail: fs.readFileSync(`./Ceue/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
+  }
+ }
+}
+/*let text = `
+\`\`\`Hi, ${ucapan()} ${ucapin()} @${tag.replace(/@.+/, '')} ✨\`\`\`
 
-`/`/`/NB : Spam/Telpon : blok!!!`/`/`/
-`.trim()
+\`\`\`NOTE - BOT TIDAK AKAN MERESPON DI DALAM GRUP JIKA PESAN SEMENTARA TIDAK DIMATIKAN.\`\`\`
+`.trim()*/
 
- await conn.send2ButtonImg(m.chat, text.trim(), "./src/logo.jpg", "Jam : ${wib} WIB/n/n© zullsaha", 'Menu', '.bwha', 'Saya mau chat owner', '.owner', { quoted: fgif, sendEphemeral: true, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 135, isForwarded: true }})
-  
+let content = fs.readFileSync('./src/logo.jpg') // change for file type
+const media = await conn.prepareMessage(m.chat, content, MessageType.image, { thumbnail: Buffer.alloc(0) })// change for file type
+
+const buttons = [
+  {buttonId: `${usedPrefix}` + 'bwha', buttonText: {displayText: 'Menu️'}, type: 1},
+  {buttonId: `${usedPrefix}` + 'jsb', buttonText: {displayText: 'List sewa bot bang'}, type: 1}/*,
+   {buttonId: '/wip', buttonText: {displayText: 'info'}, type: 1}*/
+]
+const buttonMessage = {
+    contentText: `\`\`\`Hamlo ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}, ${ucapan()} ${ucapin()}\`\`\`
+
+\`\`\`NB : Spam, Telpon : Blok!!!\`\`\``,
+    footerText: `Jam\n\n${wib} WIB\n\n© Zul Ganzy`,
+    buttons: buttons,
+    headerType: 4, // change for file type
+    imageMessage: media.message.imageMessage // change for file type
+}
+
+const andy = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage, { sendEphemeral: true, quoted: freply, contextInfo: { forwardingScore: 899,
+                isForwarded: true ,"externalAdReply": {
+          "title": `${pickRandom(['Wamduh','Yoi bang','awikwok','Kemren'])}`,
+          "body": `${pickRandom(['Hemhe','Watermak Zul','Awikwok','Yoi bang','Hamdeh'])}`,
+          "mediaType": "1",
+          "thumbnailUrl": `${pickRandom(['https://telegra.ph/file/6055740746c9067cd7ef9.jpg','https://telegra.ph/file/2624fbad04a89e4809417.jpg','https://telegra.ph/file/7980abf4219996710f1e4.jpg','https://telegra.ph/file/1a7d087032eea6abd0cd5.jpg'])}`,
+          "mediaUrl": `${pickRandom(['https://instagram.com/zullsaha','https://instagram.com/zulbot_official','https://github.com/ZulGanzy','https://wa.me/6289528232401?text=Save+nomor+saya+bang'])}`,
+     //     "thumbnail": "https://i.ibb.co/ysTv8wY/Screenshot-20210808-112316.png",
+         "sourceUrl": `${pickRandom(['https://instagram.com/zullsaha','https://instagram.com/zulbot_official','https://github.com/ZulGanzy','https://wa.me/6289528232401?text=Save+nomor+saya+bang'])}`,
+           }}})
+        setTimeout(() => {
+        conn.deleteMessage(m.chat, andy.key)
+      }, 30000)
 }
 handler.command = /^(menu|help)$/i
 handler.owner = false
@@ -50,16 +78,16 @@ function ucapan() {
     const time = moment.tz('Asia/Jakarta').format('HH')
     res = "Selamat dini hari"
     if (time >= 4) {
-        res = "Selamat pagi"
+        res = "Pagi bang"
     }
     if (time > 10) {
-        res = "Selamat siang"
+        res = "Siang bang"
     }
     if (time >= 15) {
-        res = "Selamat sore"
+        res = "Sore bang"
     }
     if (time >= 18) {
-        res = "Selamat malam"
+        res = "Malam bang"
     }
     return res
 }

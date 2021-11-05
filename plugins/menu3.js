@@ -59,7 +59,7 @@ const andy = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMe
            }}})
         setTimeout(() => {
         conn.deleteMessage(m.chat, andy.key)
-      }, 70000)
+      }, 90000)
 }
 handler.command = /^(menu|help)$/i
 handler.owner = false

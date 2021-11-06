@@ -17,6 +17,7 @@ let handler = async (m, { conn, args }) => {
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
+handler.premium = true
 handler.command = /^(tiktok(dl)?)$/i
 
 module.exports = handler

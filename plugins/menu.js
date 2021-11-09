@@ -110,38 +110,38 @@ const wib = moment.tz('Asia/Jakarta').format("HH:mm:ss")
 *╭─❒ Jadwal*
 *╰────❒ ${jadwal()}*
 *╭─❒𝙄𝙉𝙁𝙊 𝙐𝙎𝙀𝙍*
-*│* ➤𝐍𝐀𝐌𝐀 : \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
-*│* ➤𝐗𝐏 : \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│* ➤𝐌𝐎𝐍𝐄𝐘 : \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
-*│* ➤𝐋𝐈𝐌𝐈𝐓 : \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* ⪼𝐍𝐀𝐌𝐀 : \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
+*│* ⪼𝐗𝐏 : \`\`\`${Number(exp).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* ⪼𝐌𝐎𝐍𝐄𝐘 : \`\`\`${Number(money).toLocaleString().replace(/,/g, '.')}\`\`\`
+*│* ⪼𝐋𝐈𝐌𝐈𝐓 : \`\`\`${Number(limit).toLocaleString().replace(/,/g, '.')}\`\`\`
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈*
-*│* ➤𝐀𝐍𝐃𝐘 : bit.ly/3hgyfBK
-*│* ➤𝐙𝐔𝐋 : bit.ly/3C0NbMa
-*│* ➤𝐀𝐍𝐃𝐘 𝐁𝐎𝐓 : bit.ly/3nsogNs
-*│* ➤𝐙𝐔𝐋 𝐁𝐎𝐓 : bit.ly/3A3CfwN
+*│* ⪼𝐀𝐍𝐃𝐘 : bit.ly/3hgyfBK
+*│* ⪼𝐙𝐔𝐋 : bit.ly/3C0NbMa
+*│* ⪼𝐀𝐍𝐃𝐘 𝐁𝐎𝐓 : bit.ly/3nsogNs
+*│* ⪼𝐙𝐔𝐋 𝐁𝐎𝐓 : bit.ly/3A3CfwN
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙂𝙁𝙊*
-*│* ➤𝐉𝐀𝐌 : \`\`\`${wib} WIB\`\`\`
-*│* ➤𝐇𝐀𝐑𝐈 : \`\`\`%week %weton\`\`\`
-*│* ➤𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : \`\`\`%date\`\`\`
+*│* ⪼𝐉𝐀𝐌 : \`\`\`${wib} WIB\`\`\`
+*│* ⪼𝐇𝐀𝐑𝐈 : \`\`\`%week %weton\`\`\`
+*│* ⪼𝐓𝐀𝐍𝐆𝐆𝐀𝐋 : \`\`\`%date\`\`\`
 *╰──────────────────❒*
 *╭─❒𝙄𝙉𝙁𝙊 𝘽𝙊𝙏*
-*│* ➤ \`\`\`Nama : Zul BOT\`\`\`
-*│* ➤ \`\`\`Owner : Zul\`\`\`
-*│* ➤ \`\`\`Recode : Andy\`\`\`
-*│* ➤ \`\`\`Total user :\`\`\` \`\`\`%totalreg\`\`\`
-*│* ➤ \`\`\`Run Time :\`\`\` \`\`\`%uptime\`\`\`
-*│* ➤ \`\`\`Grup wa:\`\`\`
-*│* ➤ \`\`\`https://bit.ly/3BULfVM\`\`\` 
+*│* ⪼ \`\`\`Nama : Zul BOT\`\`\`
+*│* ⪼ \`\`\`Owner : Zul\`\`\`
+*│* ⪼ \`\`\`Recode : Andy\`\`\`
+*│* ⪼ \`\`\`Total user : %totalreg\`\`\`
+*│* ⪼ \`\`\`Run Time : %uptime\`\`\`
+*│* ⪼ \`\`\`Grup wa:\`\`\`
+*│* ⪼ \`\`\`https://bit.ly/3BULfVM\`\`\` 
 *╰──────────────────❒*
 
 
 %readmore`
-    let header = conn.menu.header || '╭─❒ ```%category```'
-    let body   = conn.menu.body   || '│➣ ```%cmd%islimit```'
-    let footer = conn.menu.footer || '*╰────────────────❒*\n'
-    let after  = conn.menu.after  || '➣ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n*A R I F F B*\n*R I F A I*\n*B A N G - A N D Y*\n*S A Y A (ZUL)*\n\n%readmore\n*INI ZUL:v*\n*DONASI LAH BANG*'
+    let header = conn.menu.header || '╭─❒ %category'
+    let body   = conn.menu.body   || '│➣ %cmd%islimit'
+    let footer = conn.menu.footer || '╰────────────────❒\n'
+    let after  = conn.menu.after  || '➣ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n*A R I F F B*\n*R I F A I*\n*B A N G - A N D Y*\n*Z U L - G A N Z Y*'
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'

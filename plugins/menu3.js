@@ -14,7 +14,7 @@ const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
 const fvn = {
     key: { 
          fromMe: false,
-         participant: `0@s.whatsapp.net`, ...(m.chat ? 
+         participant: `6289528232401@s.whatsapp.net`, ...(m.chat ? 
     { remoteJid: "6285795431803-1615555379@g.us" } : {}) 
                },
     message: { 

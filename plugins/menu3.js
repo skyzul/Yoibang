@@ -11,18 +11,20 @@ const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
 const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
 //let oy = `@${tag.replace(/@.+/, '')}`
 //let own = `@${owner[0]}`
-const freply = {
-  key: {
-  participant: '0@s.whatsapp.net',
-  remoteJid: 'status@broadcast'
- },
- message: {
-  imageMessage: {
-   caption: `${pickRandom(['awikwok','kemren','wius','awikwok','wuis','hamdeh'])}`,
-      jpegThumbnail: fs.readFileSync(`./Ceue/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
-  }
- }
-}
+const fvn = {
+    key: { 
+         fromMe: false,
+         participant: `0@s.whatsapp.net`, ...(m.chat ? 
+    { remoteJid: "6285795431803-1615555379@g.us" } : {}) 
+               },
+    message: { 
+       "audioMessage": {
+                "mimetype":"audio/ogg; codecs=opus",
+                "seconds": "1",
+                "ptt": "true"
+                       }
+                     } 
+                    }
 /*let text = `
 \`\`\`Hi, ${ucapan()} ${ucapin()} @${tag.replace(/@.+/, '')} ✨\`\`\`
 
@@ -41,25 +43,25 @@ const buttonMessage = {
     contentText: `\`\`\`Hamlo ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}, ${ucapan()} ${ucapin()}\`\`\`
 
 \`\`\`NB : Spam, Telpon : Blok!!!\`\`\``,
-    footerText: `Jam ${wib} WIB\n\n© Zul Ganzy`,
+    footerText: `Jam ${wib} WIB || © Zul Ganzy`,
     buttons: buttons,
     headerType: 4, // change for file type
     imageMessage: media.message.imageMessage // change for file type
 }
 
-const andy = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage, { sendEphemeral: true, quoted: freply, contextInfo: { forwardingScore: 899,
+const andy = await conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage, { sendEphemeral: true, quoted: fvn, contextInfo: { forwardingScore: 899,
                 isForwarded: true ,"externalAdReply": {
           "title": `${pickRandom(['Wamduh','Yoi bang','awikwok','Kemren'])}`,
           "body": `${pickRandom(['Hemhe','Watermak Zul','Awikwok','Yoi bang','Hamdeh'])}`,
           "mediaType": "1",
           "thumbnailUrl": `${pickRandom(['https://telegra.ph/file/6055740746c9067cd7ef9.jpg','https://telegra.ph/file/2624fbad04a89e4809417.jpg','https://telegra.ph/file/7980abf4219996710f1e4.jpg','https://telegra.ph/file/1a7d087032eea6abd0cd5.jpg'])}`,
-          "mediaUrl": `${pickRandom(['https://instagram.com/zullsaha','https://instagram.com/zulbot_official','https://github.com/ZulGanzy','https://wa.me/6289528232401?text=Save+nomor+saya+bang'])}`,
+          "mediaUrl": `${pickRandom(['https://instagram.com/zullsaha','https://instagram.com/zulbot_official','https://github.com/andyjavadams','https://wa.me/6289528232401?text=Save+nomor+saya+bang'])}`,
      //     "thumbnail": "https://i.ibb.co/ysTv8wY/Screenshot-20210808-112316.png",
          "sourceUrl": `${pickRandom(['https://instagram.com/zullsaha','https://instagram.com/zulbot_official','https://github.com/ZulGanzy','https://wa.me/6289528232401?text=Save+nomor+saya+bang'])}`,
            }}})
         setTimeout(() => {
         conn.deleteMessage(m.chat, andy.key)
-      }, 90000)
+      }, 100000)
 }
 handler.command = /^(menu|help)$/i
 handler.owner = false

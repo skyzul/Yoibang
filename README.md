@@ -1,7 +1,7 @@
 # ZUL-BOT
 
-## PENTING!!!
-# Delete tengsto : WhatsApp kenon
+# PENTING!!!
+### Delete tengsto : WhatsApp kenon
 
 Simple WhatsApp Bot
 

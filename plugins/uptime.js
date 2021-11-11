@@ -1,21 +1,19 @@
 let fs = require ('fs')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-    const fgclink = {
-        "key": {
-            "fromMe": false,
-            "participant": "0@s.whatsapp.net",
-            "remoteJid": "0@s.whatsapp.net"
-        },
-        "message": {
-            "groupInviteMessage": {
-                "groupJid": "6285795431803-1615555379@g.us",
-                "inviteCode": "mememteeeekkeke",
-                "groupName": "Wuis", 
-                "caption": "Apa kabar bang", 
-                'jpegThumbnail': fs.readFileSync(`./Ceue/${pickRandom(['1','2','3','4','5','6','7','8'])}.jpg`)
-            }
-        }
-    }
+    const fvn = {
+    key: { 
+         fromMe: false,
+         participant: `0@s.whatsapp.net`, ...(m.chat ? 
+    { remoteJid: "6285795431803-1615555379@g.us" } : {}) 
+               },
+    message: { 
+       "audioMessage": {
+                "mimetype":"audio/ogg; codecs=opus",
+                "seconds": "1",
+                "ptt": "true"
+                       }
+                     } 
+                    }
     let _uptime = process.uptime() * 1000
     let _muptime
     if (process.send) {
@@ -28,7 +26,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
     
-conn.send2Button(m.chat, `Saya berjalan selama ${uptime}`, '© zullsaha', 'All menu', '.bwha', 'Owner', '.owner', { quoted: fgclink })
+conn.send2Button(m.chat, `Saya berjalan selama ${uptime}`, '© zullsaha', 'All menu', '.bwha', 'Owner', '.owner', { quoted: fvn })
 }    
 handler.command = /^(uptime)$/i
 handler.help = ['uptime']

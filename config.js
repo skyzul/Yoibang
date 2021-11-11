@@ -1,7 +1,7 @@
 global.DeveloperMode = 'false' //true Or false
 global.owner = ['6289528232401', '62857121256952'] // Put your number here
 global.mods = ['6289528232401','62857121256952']  // Want some help?
-global.prems = ['62857121256952','6285795431803','6289528232401'] // Premium user has unlimited limit
+global.prems = ['62857121256952','6285795431803','6289528232401','6285336621105'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
